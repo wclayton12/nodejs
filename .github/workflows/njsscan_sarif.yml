@@ -22,4 +22,4 @@ jobs:
       continue-on-error: true
     - name: send curl
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}' http://pgr71bjwl06ea896iw29g.appsecengineer.training:8880/callback
+        curl -X POST -H "Content-Type: multipart/form-data" -F "file=@results.json"  http://pgr71bjwl06ea896iw29g.appsecengineer.training:8880/callback
