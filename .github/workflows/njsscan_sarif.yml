@@ -18,7 +18,7 @@ jobs:
       id: njsscan
       uses: ajinabraham/njsscan-action@master
       with:
-        args: '.'
+        args: '--json --output results.json .'
       continue-on-error: true
     - name: send curl
       run: |
